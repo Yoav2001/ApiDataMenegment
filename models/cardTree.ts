@@ -1,9 +1,4 @@
- 
-
-
-
-
- 
+//table cardTree
  export type Card ={
     id: number;
     prevCard?: QuestionCard| FinalAnswerCard;
@@ -12,11 +7,16 @@
     ahmashSelected: boolean;
 }
 
+export type Answer = {
+    id?: number
+    text: string,
+    currentQuestionCard:QuestionCard
+    nextId:number
+}
 export type QuestionCard =  Card &{ 
    answers: Answer[];
-   nextCards?: (QuestionCard | FinalAnswerCard)[];
    indexSelectedAnswer?: number;
- 
+   nextCards?: (QuestionCard | FinalAnswerCard)[];
 }
 
 export type FinalAnswerCard  =  Card & { 
@@ -29,20 +29,7 @@ export type FinalAnswerCard  =  Card & {
 
 
 
-export type FinalAnswer = {
-    id?:number,
-    crmField:string,
-    crmSubField:string,
-    crmQuestion :string,
-    crmSubQuestion:string,
-    crmSolution:string
-   }
 
-   export type Answer = {
-    id?: number
-    text: string,
-    nextId:number
-}
 
    export type addResult = " succeed to Added " | "Failed to add "
    export type deleteResulat = "succeed to delete " | "Faield to delete "

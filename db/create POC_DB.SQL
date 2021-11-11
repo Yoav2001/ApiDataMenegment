@@ -1,4 +1,10 @@
 
+create table cardTree(
+    card_id int generated always as identity not null,
+    card_title varchar[255] not null,
+    clicked int,
+    ahmash_selected boolean not null
+);
 
 create table answer(
     answer_id SERIAL PRIMARY KEY NOT NULL,
@@ -17,12 +23,6 @@ create table finalAnswer(
 
 );
 
-create table cardTree(
-    card_id int generated always as identity not null,
-    card_title varchar[255] not null,
-    clicked int,
-    ahmash_selected boolean not null
-);
 
 
 

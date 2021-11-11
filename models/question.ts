@@ -1,7 +1,7 @@
 
-export type Question = {
+export type CardTree = {
  id?:number,
-text:string
+titleCard:string,
 }
 
 
@@ -9,8 +9,8 @@ export type addResult = " succeed to Added " | "Failed to add "
 export type deleteResult = "succeed to delete " | "Faield to delete "
 export type updaterRsult = "update" | "Faield to update "
 
-export type GetAllQuestion = (qustionId: Question['id']) => Promise<Question[]>;
-export type GetQuestionById = (qustionId: Question['id']) => Promise<Question>;
-export type AddQuestion = (questionObj: Question) => Promise<string>;
-export type EditQuestion = (questionObj: Question) => Promise<string>;
-export type DeleteQuestion = (idQuestion: Question['id']) => Promise<string>;
+export type GetAllCardTree = (qustionId: CardTree['id']) => Promise<CardTree[]>;
+export type GetCardTreeById = (qustionId: CardTree['id']) => Promise<CardTree>;
+export type AddCardTree = (CardTreeObj: CardTree) => Promise<string>;
+export type EditCardTree = (CardTreeObj: CardTree) => Promise<string>;
+export type DeleteCardTree = (idCardTree: CardTree['id']) => Promise<string>;

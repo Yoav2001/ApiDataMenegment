@@ -14,3 +14,5 @@ export type GetAnswerWithAnswerId = (answerId: Answer['id']) => Promise<Answer>|
 export type AddAnswer = (AnswerObj: Answer) => Promise<string>;
 export type EditAnswer = (AnswerObj: Answer) => Promise<string>;
 export type DeleteAnswer= (idAnswer: Answer['id']) => Promise<string>
+
+
